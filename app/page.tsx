@@ -258,24 +258,26 @@ export default function Home() {
 
       {/* Navigation */}
       <header className="site-header">
-        <div className="max-w-screen-xl mx-auto px-8 py-5 flex items-center justify-between">
+        <div className="max-w-screen-xl mx-auto px-4 sm:px-8 py-4 sm:py-5 flex items-center justify-between">
           <a href="#" className="flex flex-col leading-none gap-0.5">
             <span className="font-extrabold text-xl tracking-tight leading-none text-txt-primary">PRIME<span className="text-brand-gold">FLOW</span></span>
             <span className="text-txt-muted text-[9px] tracking-[0.22em] font-medium uppercase">SOLUTIONS</span>
           </a>
-          <nav className="flex items-center gap-7">
-            <a href="#services" className="text-txt-muted text-sm hover:text-txt-primary transition-colors">Services</a>
-            <a href="#portfolio" className="text-txt-muted text-sm hover:text-txt-primary transition-colors">Portfolio</a>
-            <a href="#about" className="text-txt-muted text-sm hover:text-txt-primary transition-colors">About</a>
-            <a href="#pricing" className="text-txt-muted text-sm hover:text-txt-primary transition-colors">Pricing</a>
-            <a href="#faq" className="text-txt-muted text-sm hover:text-txt-primary transition-colors">FAQ</a>
+          <nav className="flex items-center gap-3 sm:gap-7">
+            <a href="#services" className="hidden sm:block text-txt-muted text-sm hover:text-txt-primary transition-colors">Services</a>
+            <a href="#portfolio" className="hidden sm:block text-txt-muted text-sm hover:text-txt-primary transition-colors">Portfolio</a>
+            <a href="#about" className="hidden sm:block text-txt-muted text-sm hover:text-txt-primary transition-colors">About</a>
+            <a href="#pricing" className="hidden sm:block text-txt-muted text-sm hover:text-txt-primary transition-colors">Pricing</a>
+            <a href="#faq" className="hidden sm:block text-txt-muted text-sm hover:text-txt-primary transition-colors">FAQ</a>
             <button id="theme-toggle" aria-label="Toggle dark mode">
               <svg id="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
               <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             </button>
-            <a href="https://www.instagram.com/primeflow_1?igsh=MWtsdWoyZGw0bDhsYw==" target="_blank" rel="noopener noreferrer"
-               className="ml-2 bg-brand-gold hover:bg-brand-gold-dk text-txt-primary text-sm font-bold px-5 py-2.5 rounded-full transition-colors">
-              Book a free call
+            <a href="https://wa.me/237678683534?text=Hi%20PrimeFlow!%20I%27d%20like%20to%20book%20a%20free%20consultation."
+               target="_blank" rel="noopener noreferrer"
+               className="bg-brand-gold hover:bg-brand-gold-dk text-txt-primary font-bold rounded-full transition-colors text-xs px-3 py-2 sm:text-sm sm:px-5 sm:py-2.5 sm:ml-2 whitespace-nowrap">
+              <span className="sm:hidden">Book call</span>
+              <span className="hidden sm:inline">Book a free call</span>
             </a>
           </nav>
         </div>
@@ -337,7 +339,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio mockup */}
-      <section className="max-w-5xl mx-auto px-6 mb-24">
+      <section className="hidden sm:block max-w-5xl mx-auto px-6 mb-24">
         <div className="rounded-3xl overflow-hidden border border-surf-border bg-surf-card shadow-xl">
           <div className="flex items-center gap-1.5 px-4 py-3 border-b border-surf-border bg-surf-inset">
             <span className="w-3 h-3 rounded-full bg-red-400/80"></span>
@@ -395,7 +397,7 @@ export default function Home() {
       </section>
 
       {/* Three pillars */}
-      <section id="services" className="max-w-3xl mx-auto px-6 mb-24 grid grid-cols-3 gap-10 text-center">
+      <section id="services" className="max-w-3xl mx-auto px-6 mb-16 sm:mb-24 grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-10 text-center">
         <div>
           <div className="flex justify-center mb-3">
             <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -431,7 +433,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio Grid */}
-      <section id="portfolio" className="max-w-5xl mx-auto px-6 mb-24">
+      <section id="portfolio" className="max-w-5xl mx-auto px-4 sm:px-6 mb-16 sm:mb-24">
         <div className="text-center mb-10">
           <p className="text-brand-gold text-sm font-semibold mb-1">Our Work</p>
           <h2 className="text-3xl font-extrabold text-txt-primary mb-2">What we&apos;ve built</h2>
@@ -464,15 +466,15 @@ export default function Home() {
       </section>
 
       {/* Everything you need heading */}
-      <section id="about" className="max-w-5xl mx-auto px-6 mb-10">
+      <section id="about" className="max-w-5xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
         <p className="text-brand-gold text-sm font-semibold mb-1">Everything you need to grow</p>
         <h2 className="text-4xl font-extrabold leading-tight mb-4 text-txt-primary">nothing you don&apos;t</h2>
         <p className="text-txt-muted text-sm leading-relaxed max-w-xs">Primeflow removes the complexity of building a professional brand, while giving you full control over how you show up online.</p>
       </section>
 
       {/* Made for small businesses card */}
-      <section className="max-w-5xl mx-auto px-6 mb-5">
-        <div className="bg-surf-card border border-surf-border rounded-3xl p-10 grid grid-cols-2 gap-10 items-center shadow-sm">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 mb-5">
+        <div className="bg-surf-card border border-surf-border rounded-3xl p-6 sm:p-10 grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 items-center shadow-sm">
           <div>
             <h3 className="text-2xl font-bold leading-snug mb-3 text-txt-primary">Made for small businesses,<br />not just big brands.</h3>
             <p className="text-txt-muted text-sm leading-relaxed">We focus on creating modern brand identities, strong online presence systems and high-impact visual experiences that attract customers and build trust.</p>
@@ -493,7 +495,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="max-w-5xl mx-auto px-6 mb-5">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 mb-5">
         <div className="text-center mb-10 pt-10">
           <p className="text-brand-gold text-sm font-semibold mb-1">Client Stories</p>
           <h2 className="text-3xl font-extrabold text-txt-primary">What clients say</h2>
@@ -546,9 +548,9 @@ export default function Home() {
       </section>
 
       {/* More services card */}
-      <section className="max-w-5xl mx-auto px-6 mb-36">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 mb-16 sm:mb-36">
         <div className="bg-surf-card border border-surf-border rounded-3xl overflow-hidden shadow-sm">
-          <div className="flex items-center justify-between px-8 py-4 border-b border-surf-border bg-surf-inset">
+          <div className="flex items-center justify-between px-4 sm:px-8 py-4 border-b border-surf-border bg-surf-inset">
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <div className="w-5 h-5 rounded bg-brand-gold flex items-center justify-center text-xs font-extrabold text-txt-primary">P</div>
@@ -562,7 +564,7 @@ export default function Home() {
             </div>
             <a href="https://www.instagram.com/primeflow_1?igsh=MWtsdWoyZGw0bDhsYw==" target="_blank" rel="noopener noreferrer" className="bg-brand-gold text-txt-primary text-xs font-bold px-4 py-2 rounded-full">Book a free call</a>
           </div>
-          <div className="p-8 grid grid-cols-2 gap-10 items-center">
+          <div className="p-5 sm:p-8 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 items-center">
             <div>
               <h3 className="text-xl font-bold mb-2 text-txt-primary">All services, one studio</h3>
               <p className="text-txt-muted text-sm leading-relaxed">Beyond websites — Primeflow also handles event flyer campaigns, YouTube thumbnail systems, brand identity packages and profile optimisation. Everything under one roof.</p>
@@ -593,8 +595,8 @@ export default function Home() {
       </section>
 
       {/* How we work */}
-      <section className="max-w-5xl mx-auto px-6 mb-36 grid grid-cols-2 gap-20 items-center">
-        <div className="flex items-center justify-center">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 mb-16 sm:mb-36 grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-20 items-center">
+        <div className="hidden sm:flex items-center justify-center">
           <svg width="420" height="420" viewBox="0 0 420 420" fill="none" aria-hidden="true">
             <circle cx="210" cy="210" r="200" stroke="#C99600" strokeWidth="0.7" opacity="0.12"/>
             <circle cx="210" cy="210" r="170" stroke="#C99600" strokeWidth="0.8" opacity="0.18"/>
@@ -628,7 +630,7 @@ export default function Home() {
       </section>
 
       {/* Before / After Slider */}
-      <section className="max-w-3xl mx-auto px-6 mb-36">
+      <section className="max-w-3xl mx-auto px-4 sm:px-6 mb-16 sm:mb-36">
         <div className="text-center mb-10">
           <p className="text-brand-gold text-sm font-semibold mb-1">Transformation</p>
           <h2 className="text-3xl font-extrabold text-txt-primary mb-2">Before &amp; After</h2>
@@ -657,7 +659,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="max-w-3xl mx-auto px-6 mb-36">
+      <section id="faq" className="max-w-3xl mx-auto px-4 sm:px-6 mb-16 sm:mb-36">
         <p className="text-brand-gold text-sm font-semibold mb-1">FAQ</p>
         <h2 className="text-3xl font-extrabold mb-10 text-txt-primary">Every question has an answer</h2>
         <div className="divide-y divide-surf-border">
@@ -699,7 +701,7 @@ export default function Home() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="text-center max-w-2xl mx-auto px-6 mb-36">
+      <section className="text-center max-w-2xl mx-auto px-4 sm:px-6 mb-16 sm:mb-36">
         <h2 className="text-4xl font-extrabold leading-tight mb-3 text-txt-primary">Stand out &amp; get<br />more customers</h2>
         <p className="text-txt-muted text-sm leading-relaxed mb-8">Stop blending in. Start attracting clients.<br />Book your free consultation today.</p>
         <a href="https://wa.me/237678683534?text=Hi%20PrimeFlow!%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener noreferrer"
@@ -712,13 +714,13 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="max-w-5xl mx-auto px-6 pb-10">
-        <div className="flex items-start justify-between">
+      <footer className="max-w-5xl mx-auto px-4 sm:px-6 pb-10">
+        <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-8 sm:gap-0">
           <div className="flex flex-col leading-none gap-0.5">
             <span className="font-extrabold text-lg tracking-tight leading-none text-txt-primary">PRIME<span className="text-brand-gold">FLOW</span></span>
             <span className="text-txt-muted text-[9px] tracking-[0.22em] font-medium uppercase">SOLUTIONS</span>
           </div>
-          <div className="flex gap-16">
+          <div className="flex gap-10 sm:gap-16 flex-wrap">
             <div>
               <p className="text-txt-muted text-xs font-semibold mb-3">Connect</p>
               <div className="space-y-2.5">
@@ -751,24 +753,24 @@ export default function Home() {
       </footer>
 
       {/* Floating contact bar */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 flex flex-col gap-2 sm:gap-3 z-50">
         <a href="https://wa.me/237678683534" target="_blank" rel="noopener noreferrer"
            title="Chat on WhatsApp"
-           className="group flex items-center gap-3 bg-[#F5B800] hover:bg-[#C99600] text-[#1a1a18] rounded-full shadow-lg transition-all duration-300 overflow-hidden"
-           style={{height:'52px',padding:'0 18px 0 14px'}}>
+           className="flex items-center gap-3 bg-[#F5B800] hover:bg-[#C99600] text-[#1a1a18] rounded-full shadow-lg transition-all duration-300 overflow-hidden"
+           style={{height:'44px',width:'44px',padding:'0 11px',justifyContent:'center'} as React.CSSProperties}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{flexShrink:0}}>
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
-          <span className="text-sm font-bold whitespace-nowrap">WhatsApp</span>
+          <span className="hidden sm:inline text-sm font-bold whitespace-nowrap pr-1">WhatsApp</span>
         </a>
         <a href="https://www.instagram.com/primeflow_1?igsh=MWtsdWoyZGw0bDhsYw==" target="_blank" rel="noopener noreferrer"
            title="Follow on Instagram"
-           className="group flex items-center gap-3 text-[#1a1a18] rounded-full shadow-lg transition-all duration-300 overflow-hidden"
-           style={{height:'52px',padding:'0 18px 0 14px',background:'#F5B800'}}>
+           className="flex items-center gap-3 text-[#1a1a18] rounded-full shadow-lg transition-all duration-300 overflow-hidden"
+           style={{height:'44px',width:'44px',padding:'0 11px',justifyContent:'center',background:'#F5B800'} as React.CSSProperties}>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style={{flexShrink:0}}>
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
           </svg>
-          <span className="text-sm font-bold whitespace-nowrap">@primeflow_1</span>
+          <span className="hidden sm:inline text-sm font-bold whitespace-nowrap pr-1">@primeflow_1</span>
         </a>
       </div>
     </>

@@ -23,7 +23,17 @@
       "PowerShell(git config --global user.name)",
       "PowerShell(git config --global user.email)",
       "PowerShell(git config --global --list 2>&1)",
-      "PowerShell($env:GITHUB_TOKEN; [System.Environment]::GetEnvironmentVariable\\('GITHUB_TOKEN', 'User'\\))"
+      "PowerShell($env:GITHUB_TOKEN; [System.Environment]::GetEnvironmentVariable\\('GITHUB_TOKEN', 'User'\\))",
+      "PowerShell($token = $env:GITHUB_TOKEN; $headers = @{ Authorization = \"token $token\"; Accept = \"application/vnd.github.v3+json\" }; $body = @{ name = \"primeflow-portfolio\"; private = $false; description = \"PrimeFlow Solutions — Next.js portfolio with Supabase + Instagram integration\" } | ConvertTo-Json; Invoke-RestMethod -Uri \"https://api.github.com/user/repos\" -Method Post -Headers $headers -Body $body -ContentType \"application/json\" | Select-Object full_name, html_url, clone_url)",
+      "PowerShell($token = $env:GITHUB_TOKEN; $headers = @{ Authorization = \"token $token\"; Accept = \"application/vnd.github.v3+json\" }; $response = Invoke-RestMethod -Uri \"https://api.github.com/user/repos\" -Method Get -Headers $headers; $response | Where-Object { $_.name -eq \"primeflow-portfolio\" } | Select-Object full_name, html_url)",
+      "Bash(python scripts/with_server.py --help)",
+      "Bash(python scripts/with_server.py --server \"cmd /c cd /d C:\\\\Users\\\\Q\\\\Desktop\\\\portfolio && npm run dev\" --port 3000 --timeout 60 -- python \"C:\\\\Users\\\\Q\\\\Desktop\\\\portfolio\\\\screenshots\\\\take_screenshots.py\")",
+      "PowerShell(try { $r = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5; \"Status: $\\($r.StatusCode\\)\" } catch { \"Error: $_\" })",
+      "Bash(python \"C:\\\\Users\\\\Q\\\\Desktop\\\\portfolio\\\\screenshots\\\\take_screenshots.py\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git commit *)"
     ]
   }
 }
