@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx puppeteer *)",
+      "Bash(node -e ' *)",
+      "Bash(npm list *)",
+      "Read(//c/Program Files/Google/Chrome/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Microsoft/Edge/Application/**)",
+      "Read(//c/Program Files \\(x86\\)/Google/Chrome/**)",
+      "Bash(npm install *)",
+      "Bash(start \"c:/Users/Q/Desktop/portfolio/index.html\")",
+      "WebFetch(domain:www.instagram.com)",
+      "Bash(start \"\" \"c:\\\\Users\\\\Q\\\\Desktop\\\\portfolio\\\\index.html\")",
+      "Bash(start c:/Users/Q/Desktop/portfolio/index.html)",
+      "Bash(xargs grep *)",
+      "Bash(cp -r \"/c/Users/Q/Desktop/portfolio/branding project\" \"/c/Users/Q/Desktop/portfolio/public/branding project\")",
+      "Bash(cp -r \"/c/Users/Q/Desktop/portfolio/booking sites\" \"/c/Users/Q/Desktop/portfolio/public/booking sites\")",
+      "Bash(cp -r \"/c/Users/Q/Desktop/portfolio/Social visuals\" \"/c/Users/Q/Desktop/portfolio/public/Social visuals\")",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(gh auth *)",
+      "PowerShell(gh auth status)",
+      "PowerShell(git config --global user.name)",
+      "PowerShell(git config --global user.email)",
+      "PowerShell(git config --global --list 2>&1)",
+      "PowerShell($env:GITHUB_TOKEN; [System.Environment]::GetEnvironmentVariable\\('GITHUB_TOKEN', 'User'\\))"
+    ]
+  }
+}
