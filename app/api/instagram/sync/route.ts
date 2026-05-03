@@ -1,3 +1,4 @@
+// Polled every 10 minutes by Vercel cron — see vercel.json
 import { NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
 import { parseSection } from '@/lib/hashtagRouter'
