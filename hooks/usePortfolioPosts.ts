@@ -29,6 +29,8 @@ export function usePortfolioPosts(section: string) {
 
       if (cancelled) return
 
+      console.log('[usePortfolioPosts]', { section, data, error })
+
       if (error) {
         setError(error.message)
       } else {
